@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>
+    Công ty Cổ phần Đầu tư Công nghệ Hoàng Huy - Phát triển Sản phẩm Công nghệ
+  </title>
+  <meta name="description"
+    content="Công ty Cổ phần Đầu tư Công nghệ Hoàng Huy (Hoang Huy Tech) cung cấp giải pháp GIS (WebGIS, Mobile GIS, ETL dữ liệu không gian) cho doanh nghiệp, cơ quan, tổ chức." />
+  <meta name="keywords" content="GIS, WebGIS, Mobile GIS, bản đồ số, dữ liệu không gian, Hoàng Huy Tech" />
+  <meta name="author" content="CÔNG TY CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ HOÀNG HUY" />
+  <link rel="icon" type="image/png" href="public/LogoHH.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-website-url.com/" />
+  <meta property="og:title" content="Giải pháp GIS doanh nghiệp - Hoàng Huy Tech" />
+  <meta property="og:description"
+    content="Nền tảng GIS toàn diện: WebGIS, Mobile GIS, ETL dữ liệu không gian, phân tích & trực quan." />
+  <meta property="og:image" content="https://placehold.co/1200x630/e2e8f0/0f172a?text=Hoang+Huy+Technology" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://your-website-url.com/" />
+  <meta property="twitter:title" content="Giải pháp GIS doanh nghiệp - Hoàng Huy Tech" />
+  <meta property="twitter:description"
+    content="Nền tảng GIS toàn diện: WebGIS, Mobile GIS, ETL dữ liệu không gian, phân tích & trực quan." />
+  <meta property="twitter:image" content="https://placehold.co/1200x630/e2e8f0/0f172a?text=Hoang+Huy+Technology" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Lightbox (cho ảnh) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+
+  <style>
+    /* Reset và CSS cơ bản cho responsive */
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #ffffff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Container responsive */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Responsive utilities */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 0.75rem;
+      }
+
+      .text-5xl,
+      .text-6xl,
+      .text-7xl,
+      .text-8xl {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+      }
+
+      .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+
+      .w-full {
+        width: 100% !important;
+      }
+
+      .overflow-hidden {
+        overflow: hidden !important;
+      }
+
+      .lg\\:flex {
+        display: none;
+      }
+
+      .lg\\:hidden {
+        display: block;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.5rem;
+      }
+
+      .px-6 {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+      }
+
+      .text-5xl,
+      .text-6xl,
+      .text-7xl,
+      .text-8xl {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+      }
+    }
+
+    /* Fix cho tất cả các phần tử */
+    img,
+    video,
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+
+    section {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    /* Fix cho mobile menu */
+    #mobile-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-top: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hero background pattern (theo truyenthanh.html) */
+    .hero-bg {
+      background-color: #f8fafc;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e2e8f0' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9z'/%3E%3Cpath d='M6 5V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v5h9V0h1v6H0V5h6zm0 10V6h1v9h9V6h1v9h9V6h1v9h9V6h1v9h9V6h1v9h9V6h1v9h9V6h1v9h9V6h1v10H0V15h6zm0 10V16h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V25h6zm0 10V26h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V35h6zm0 10V36h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V45h6zm0 10V46h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V55h6zm0 10V56h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V65h6zm0 10V66h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V75h6zm0 10V76h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v9h9v-9h1v10H0V85h6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Glass helpers */
+    .glass {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .25);
+    }
+
+    .glass-dark {
+      backdrop-filter: blur(14px);
+      background: rgba(15, 23, 42, .35);
+      border: 1px solid rgba(148, 163, 184, .24);
+    }
+
+    /* Parallax */
+    .parallax {
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+    }
+
+    /* A11y: tôn trọng giảm chuyển động */
+    @media (prefers-reduced-motion: reduce) {
+      .parallax {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="text-slate-700">
+  <!-- ========== HEADER ========== -->
+  <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="public/LogoHH.png" alt="Logo Công ty Hoàng Huy" class="h-12" />
+      </a>
+
+      <!-- Menu desktop -->
+      <ul class="hidden lg:flex items-center space-x-8 text-slate-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition-colors">Trang chủ</a></li>
+        <li><a href="introduce.html" class="hover:text-blue-600 transition-colors">Giới thiệu</a></li>
+        <li><a href="values.html" class="hover:text-blue-600 transition-colors">Giá Trị Cốt Lõi</a></li>
+        <li><a href="tech-fields.html" class="hover:text-blue-600 transition-colors  text-blue-600">Lĩnh Vực</a></li>
+        <li><a href="portfolio.html" class="hover:text-blue-600 transition-colors text-blue-600">Sản Phẩm</a></li>
+        <li>
+          <a href="contact.html"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Liên Hệ
+          </a>
+        </li>
+      </ul>
+
+      <!-- Nút mobile -->
+      <button id="mobile-menu-button" class="lg:hidden text-slate-800" aria-label="Mở menu">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white">
+      <ul class="flex flex-col items-center space-y-6 py-6 text-slate-700">
+        <li><a href="index.html" class="hover:text-blue-600 transition-colors">Trang chủ</a></li>
+        <li><a href="introduce.html" class="hover:text-blue-600 transition-colors">Giới thiệu</a></li>
+        <li><a href="values.html" class="hover:text-blue-600 transition-colors">Giá Trị Cốt Lõi</a></li>
+        <li><a href="tech-fields.html" class="hover:text-blue-600 transition-colors  text-blue-600">Lĩnh Vực</a></li>
+        <li><a href="portfolio.html" class="hover:text-blue-600 transition-colors text-blue-600">Sản Phẩm</a></li>
+        <li>
+          <a href="contact.html"
+            class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            Liên Hệ
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2 text-xl text-slate-600">
+          <li><a href="../index.html" class="hover:text-blue-600">Trang chủ</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="portfolio.html" class="hover:text-blue-600">Sản phẩm</a></li>
+          <li aria-hidden="true">/</li>
+          <li class="font-medium text-blue-600" aria-current="page">GIS</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ===== HERO (phong cách truyenthanh) ===== -->
+    <section class="hero-bg relative overflow-hidden pt-12 pb-20">
+      <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Copy -->
+        <div data-aos="fade-up" class="space-y-6 max-w-xl relative z-10">
+          <h1 class="font-extrabold tracking-tight text-slate-900 leading-tight"
+            style="font-size:clamp(2rem,6vw,3.5rem)">
+            Nền tảng <span class="text-blue-600">GIS</span> doanh nghiệp
+          </h1>
+          <p class="text-lg text-slate-600">
+            WebGIS • Mobile GIS • ETL dữ liệu không gian. Quản trị tập trung, phân tích & trực quan hoá, tích hợp API mở
+            và bảo mật SSO.
+          </p>
+
+          <!-- KPI glass -->
+          <div class="mt-2 grid grid-cols-3 gap-4 max-w-md">
+            <div class="glass-dark text-white rounded-2xl p-4">
+              <p class="text-2xl font-bold">99.9%</p>
+              <p class="text-white/80 text-sm">Uptime</p>
+            </div>
+            <div class="glass-dark text-white rounded-2xl p-4">
+              <p class="text-2xl font-bold">10TB+</p>
+              <p class="text-white/80 text-sm">Dữ liệu không gian</p>
+            </div>
+            <div class="glass-dark text-white rounded-2xl p-4">
+              <p class="text-2xl font-bold">24/7</p>
+              <p class="text-white/80 text-sm">Support</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#gis-capabilities"
+              class="inline-flex items-center px-6 py-3 rounded-full text-white bg-gradient-to-r from-blue-600 to-purple-600 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all">Xem
+              năng lực <i class="fas fa-arrow-right ml-2"></i></a>
+            <a href="#gis-modules"
+              class="inline-flex items-center gap-2 px-7 py-3 rounded-full font-semibold border-2 border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors">
+              Xem module
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="relative" data-aos="zoom-in" aria-hidden="true">
+          <div class="absolute -top-6 -left-6 w-full h-full rounded-3xl border-2 border-blue-200 z-0"></div>
+          <a href="public/4.png" data-lightbox="hero" data-title="Mô hình hệ thống GIS doanh nghiệp">
+            <img src="public/4.png" alt="Minh họa hệ thống GIS" class="relative z-10 w-full rounded-2xl shadow-xl"
+              loading="lazy" width="1200" height="800" />
+          </a>
+          <!-- parallax blobs -->
+          <span class="parallax hidden md:block absolute -right-6 -top-6 w-24 h-24 rounded-full bg-blue-200/60"></span>
+          <span
+            class="parallax hidden md:block absolute -left-10 bottom-10 w-32 h-32 rounded-full bg-purple-200/60"></span>
+          <span
+            class="parallax hidden md:block absolute right-10 -bottom-8 w-20 h-20 rounded-full bg-cyan-200/60"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NĂNG LỰC (3 cards, phong cách truyenthanh) ===== -->
+    <section class="py-20 bg-white" id="gis-capabilities">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <div class="inline-block relative">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">Giải pháp GIS toàn diện</h2>
+            <span
+              class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 md:w-28 h-1.5 rounded-full bg-rose-400"></span>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <article
+            class="bg-white rounded-3xl p-10 border border-slate-100 shadow-[0_10px_40px_rgba(2,6,23,0.06)] hover:shadow-[0_16px_50px_rgba(2,6,23,0.08)] transition-shadow"
+            data-aos="fade-up">
+            <div
+              class="mx-auto mb-6 w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-white">
+              <i class="fa-solid fa-compass-drafting text-3xl"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 text-center">Tư vấn & khảo sát</h3>
+            <p class="text-slate-600 text-center mt-4 leading-relaxed">Thiết kế mô hình dữ liệu không gian, quy hoạch
+              lớp bản đồ, quy trình chuẩn hóa topology & metadata.</p>
+          </article>
+
+          <article
+            class="bg-white rounded-3xl p-10 border border-slate-100 shadow-[0_10px_40px_rgba(2,6,23,0.06)] hover:shadow-[0_16px_50px_rgba(2,6,23,0.08)] transition-shadow"
+            data-aos="fade-up" data-aos-delay="75">
+            <div
+              class="mx-auto mb-6 w-20 h-20 rounded-2xl bg-gradient-to-br from-rose-400 to-orange-400 flex items-center justify-center text-white">
+              <i class="fa-solid fa-server text-3xl"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 text-center">Triển khai WebGIS</h3>
+            <p class="text-slate-600 text-center mt-4 leading-relaxed">Phân tích, trực quan, phân quyền & tích hợp SSO;
+              API mở kết nối hệ thống nghiệp vụ.</p>
+          </article>
+
+          <article
+            class="bg-white rounded-3xl p-10 border border-slate-100 shadow-[0_10px_40px_rgba(2,6,23,0.06)] hover:shadow-[0_16px_50px_rgba(2,6,23,0.08)] transition-shadow"
+            data-aos="fade-up" data-aos-delay="150">
+            <div
+              class="mx-auto mb-6 w-20 h-20 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white">
+              <i class="fa-solid fa-mobile-screen-button text-3xl"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 text-center">Mobile GIS & vận hành</h3>
+            <p class="text-slate-600 text-center mt-4 leading-relaxed">Thu thập hiện trường offline/online, ETL dữ liệu,
+              giám sát 24/7 & đào tạo chuyển giao.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MODULE/ZIGZAG (theo phiên bản thiết bị ở truyenthanh) ===== -->
+    <section class="py-24 bg-white" id="gis-modules">
+      <div class="container mx-auto px-6 space-y-28">
+
+        <!-- Module 1: WebGIS Core -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative" data-aos="fade-up">
+          <div class="hidden lg:block absolute -right-24 -top-6 w-80 h-80 rounded-[55%] bg-cyan-100/50 blur-3xl"></div>
+          <div class="hidden lg:block absolute -left-12 bottom-8 w-[28rem] h-64 rounded-[55%] bg-blue-100/40 blur-3xl">
+          </div>
+
+          <div class="order-1">
+            <div class="inline-block relative mb-6">
+              <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Module <span
+                  class="block">WebGIS Core</span></h3>
+              <span class="absolute -top-3 left-0 w-24 h-1.5 rounded-full bg-rose-400"></span>
+            </div>
+            <ul class="text-slate-700 space-y-3 leading-relaxed">
+              <li>• Lập nhiệm vụ, thiết kế kỹ thuật – dự toán, tư vấn lập phương án khảo sát thành lập bản đồ.</li>
+              <li>• Khảo sát, đo đạc thành lập bản đồ địa hình trên cạn, dưới nước tỷ lệ 1:500, 1:1000, 1:2000, 1:5000.
+              </li>
+              <li>• Khảo sát địa hình công trình xây dựng dân dụng và công nghiệp, công trình giao thông, thủy lợi,…
+              </li>
+            </ul>
+          </div>
+
+          <div class="order-2">
+            <a href="public/10.png" data-lightbox="modules" data-title="WebGIS Core">
+              <img src="public/10.png" alt="WebGIS Core"
+                class="w-full rounded-3xl shadow-[0_16px_60px_rgba(2,6,23,0.12)]" loading="lazy">
+            </a>
+          </div>
+        </div>
+
+        <!-- Module 2: Mobile GIS -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative" data-aos="fade-up">
+          <div class="hidden lg:block absolute -left-24 -top-6 w-80 h-80 rounded-[55%] bg-rose-100/60 blur-3xl"></div>
+          <div
+            class="hidden lg:block absolute -right-8 bottom-6 w-[28rem] h-64 rounded-[55%] bg-indigo-100/50 blur-3xl">
+          </div>
+
+          <div class="order-1 lg:order-none">
+            <a href="public/11.png" data-lightbox="modules" data-title="Mobile GIS">
+              <img src="public/11.png" alt="Mobile GIS"
+                class="w-full rounded-3xl shadow-[0_16px_60px_rgba(2,6,23,0.12)]" loading="lazy">
+            </a>
+          </div>
+
+          <div class="order-2">
+            <div class="inline-block relative mb-6">
+              <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Dịch vụ liên quan đến<span
+                  class="block">Quản lý trên nền GIS</span></h3>
+              <span class="absolute -top-3 left-0 w-24 h-1.5 rounded-full bg-rose-400"></span>
+            </div>
+            <ul class="text-slate-700 space-y-3 leading-relaxed">
+              <li>• Đo đạc thành lập bản đồ địa chính.</li>
+              <li>• Điều tra, đánh giá đất đai; Lập quy hoạch, kế hoạch sử dụng đất.</li>
+              <li>• Xây dựng cơ sở dữ liệu quản lý đất đai.</li>
+              <li>• Xây dựng CSDL Giao thông, xây dựng CSDL dùng chung cho Sở TTTT.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Module 3: ETL & Tích hợp -->
+        <div class="grid lg:grid-cols-2 gap-12 items-center relative" data-aos="fade-up">
+          <div class="hidden lg:block absolute -right-24 -top-6 w-80 h-80 rounded-[55%] bg-emerald-100/50 blur-3xl">
+          </div>
+          <div class="hidden lg:block absolute -left-10 bottom-6 w-[26rem] h-60 rounded-[55%] bg-sky-100/50 blur-3xl">
+          </div>
+
+          <div class="order-1">
+            <div class="inline-block relative mb-6">
+              <h3 class="text-2xl md:text-4xl font-extrabold text-slate-900 tracking-tight">Dịch vụ thu thập<span
+                  class="block">Và xây dựng cơ sở dữ liệu địa lý,<span class="block">CSDL ngành</span></h3>
+              <span class="absolute -top-3 left-0 w-24 h-1.5 rounded-full bg-rose-400"></span>
+            </div>
+            <ul class="text-slate-700 space-y-3 leading-relaxed">
+              <li>• Ứng dụng công nghệ bay chụp ảnh bằng UAV.</li>
+              <li>• Xử lý dữ liệu ảnh viễn thám.</li>
+              <li>• Điều tra, thu thập, xây dựng cơ sở dữ liệu địa lý, cơ sở dữ liệu quản lý hạ tầng kỹ thuật và các cơ
+                sở dữ liệu khác.</li>
+              <li>• Scan 3D mặt đất; Xây dựng mô hình 3D địa hình, các công trình văn hóa xã hội.</li>
+            </ul>
+          </div>
+
+          <div class="order-2">
+            <a href="public/12.png" data-lightbox="modules" data-title="ETL & Integration">
+              <img src="public/12.png" alt="ETL & Integration"
+                class="w-full rounded-3xl shadow-[0_16px_60px_rgba(2,6,23,0.12)]" loading="lazy">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== Stats (glass, như truyenthanh) ===== -->
+    <section class="py-16 bg-slate-50 relative overflow-hidden">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="bg-white/80 backdrop-blur rounded-2xl p-8 shadow-sm border border-slate-200" data-aos="fade-up">
+            <div class="text-5xl font-bold text-blue-600 mb-2">50+</div>
+            <h3 class="text-xl font-semibold text-slate-800">Dự án GIS</h3>
+            <p class="text-slate-600 mt-2">Triển khai đa lĩnh vực</p>
+          </div>
+          <div class="bg-white/80 backdrop-blur rounded-2xl p-8 shadow-sm border border-slate-200" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="text-5xl font-bold text-blue-600 mb-2">100%</div>
+            <h3 class="text-xl font-semibold text-slate-800">Khách hàng hài lòng</h3>
+            <p class="text-slate-600 mt-2">Dịch vụ tận tâm</p>
+          </div>
+          <div class="bg-white/80 backdrop-blur rounded-2xl p-8 shadow-sm border border-slate-200" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="text-5xl font-bold text-blue-600 mb-2">24/7</div>
+            <h3 class="text-xl font-semibold text-slate-800">Hỗ trợ kỹ thuật</h3>
+            <p class="text-slate-600 mt-2">Sẵn sàng đồng hành</p>
+          </div>
+        </div>
+      </div>
+      <span class="parallax hidden md:block absolute left-10 top-10 w-28 h-28 rounded-full bg-blue-100"></span>
+      <span class="parallax hidden md:block absolute right-20 bottom-8 w-40 h-40 rounded-full bg-purple-100"></span>
+    </section>
+
+
+  </main>
+
+  <!-- ===== FOOTER (KHÔNG SỬA) ===== -->
+  <footer class="bg-slate-800 text-slate-300">
+    <div class="container mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <a href="index.html" class="mb-4 inline-block" aria-label="Trang chủ">
+            <img src="public/LogoHH.png" alt="Logo Công ty Hoàng Huy" class="h-12" width="48" height="48" />
+          </a>
+          <p class="text-white font-semibold">CÔNG TY CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ HOÀNG HUY</p>
+          <p class="mt-2 text-slate-400">MST: 0110817764</p>
+          <p class="mt-2 text-slate-400">Số 10, Ơ 2, KĐT bán đảo Linh Đàm, Hoàng Liệt, Hà Nội</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Liên kết nhanh</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#values" class="hover:text-white">Giá Trị Cốt Lõi</a></li>
+            <li><a href="index.html#tech-fields" class="hover:text-white">Lĩnh Vực</a></li>
+            <li><a href="index.html#portfolio" class="hover:text-white">Sản Phẩm</a></li>
+            <li><a href="#contact" class="hover:text-white">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Kết nối</h3>
+          <p>Email: <a href="mailto:congnghehoanghuyjsc@gmail.com"
+              class="hover:text-white">congnghehoanghuyjsc@gmail.com</a></p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="hover:text-white text-xl" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="hover:text-white text-xl" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-slate-700 text-center text-sm text-slate-400">
+        <p>&copy; <span id="year"></span> Hoang Huy Technology Investment JSC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.AOS) AOS.init({ duration: 700, once: true });
+
+      // Mobile menu (giữ nguyên logic của bạn)
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      const icon = btn?.querySelector("i");
+      btn?.addEventListener("click", () => {
+        menu?.classList.toggle("hidden");
+        const open = !menu?.classList.contains("hidden");
+        btn?.setAttribute("aria-expanded", String(open));
+        if (!icon) return;
+        icon.classList.toggle("fa-bars", !open);
+        icon.classList.toggle("fa-times", open);
+      });
+
+      // Lightbox options
+      if (window.lightbox) {
+        lightbox.option({
+          resizeDuration: 200,
+          wrapAround: true,
+          fadeDuration: 150,
+          imageFadeDuration: 150
+        });
+      }
+
+      // Year in footer
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      // Simple parallax for floating circles
+      const layers = Array.from(document.querySelectorAll('.parallax'));
+      const speed = [0.35, 0.22, 0.18];
+      const mqReduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (!mqReduce.matches) {
+        window.addEventListener('scroll', () => {
+          const s = window.scrollY;
+          layers.forEach((el, i) => { el.style.transform = `translate3d(0, ${s * speed[i % speed.length]}px, 0)`; });
+        }, { passive: true });
+      }
+    });
+  </script>
+
+  <!-- Floating Zalo Button -->
+  <a href="https://zalo.me/02466669898" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo"
+    class="fixed bottom-6 right-6 z-50">
+    <span
+      class="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-xl flex items-center justify-center transition-transform transform hover:scale-110 font-bold">Zalo</span>
+  </a>
+</body>
+
+</html>

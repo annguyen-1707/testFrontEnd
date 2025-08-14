@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>
+        Công ty Cổ phần Đầu tư Công nghệ Hoàng Huy - Hệ thống Truyền thanh Thông minh
+    </title>
+    <meta name="description"
+        content="Hệ thống Truyền thanh Thông minh của Hoàng Huy Tech - Giải pháp công nghệ hiện đại cho truyền thông công cộng, tích hợp IoT và điều khiển từ xa." />
+    <meta name="keywords"
+        content="truyền thanh thông minh, hệ thống truyền thanh, công nghệ truyền thanh, loa phát thanh, giải pháp âm thanh, Hoàng Huy Tech" />
+    <meta name="author" content="CÔNG TY CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ HOÀNG HUY" />
+    <link rel="icon" type="image/png" href="public/LogoHH.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-website-url.com/truyen-thanh-thong-minh.html" />
+    <meta property="og:title" content="Hệ thống Truyền thanh Thông minh - Hoàng Huy Tech" />
+    <meta property="og:description"
+        content="Giải pháp công nghệ hiện đại cho truyền thông công cộng, tích hợp IoT và điều khiển từ xa." />
+    <meta property="og:image" content="https://placehold.co/1200x630/e2e8f0/0f172a?text=Truyền+thanh+Thông+minh" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://your-website-url.com/truyen-thanh-thong-minh.html" />
+    <meta property="twitter:title" content="Hệ thống Truyền thanh Thông minh - Hoàng Huy Tech" />
+    <meta property="twitter:description"
+        content="Giải pháp công nghệ hiện đại cho truyền thông công cộng, tích hợp IoT và điều khiển từ xa." />
+    <meta property="twitter:image" content="https://placehold.co/1200x630/e2e8f0/0f172a?text=Truyền+thanh+Thông+minh" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- LineIcons -->
+    <link rel="stylesheet" href="https://cdn.lineicons.com/5.0/lineicons.css" />
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+        /* Reset và CSS cơ bản cho responsive */
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Container responsive */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Responsive utilities */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 0.75rem;
+            }
+
+            .text-5xl,
+            .text-6xl,
+            .text-7xl,
+            .text-8xl {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+            }
+
+            .px-6 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .w-full {
+                width: 100% !important;
+            }
+
+            .overflow-hidden {
+                overflow: hidden !important;
+            }
+
+            .lg\\:flex {
+                display: none;
+            }
+
+            .lg\\:hidden {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.5rem;
+            }
+
+            .px-6 {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+
+            .text-5xl,
+            .text-6xl,
+            .text-7xl,
+            .text-8xl {
+                font-size: 2rem !important;
+                line-height: 1.1 !important;
+            }
+        }
+
+        /* Fix cho tất cả các phần tử */
+        img,
+        video,
+        iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Fix cho mobile menu */
+        #mobile-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .img-hover-zoom {
+            transition: transform 0.5s ease;
+        }
+
+        .img-hover-zoom:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="text-slate-700">
+    <!-- ========== HEADER ========== -->
+    <header class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="public/LogoHH.png" alt="Logo Công ty Hoàng Huy" class="h-12" />
+            </a>
+
+            <!-- Menu desktop -->
+            <ul class="hidden lg:flex items-center space-x-8 text-slate-700">
+                <li><a href="index.html" class="hover:text-blue-600 transition-colors">Trang chủ</a></li>
+                <li><a href="introduce.html" class="hover:text-blue-600 transition-colors">Giới thiệu</a></li>
+                <li><a href="values.html" class="hover:text-blue-600 transition-colors">Giá Trị Cốt Lõi</a></li>
+                <li><a href="tech-fields.html" class="hover:text-blue-600 transition-colors  text-blue-600">Lĩnh Vực</a>
+                </li>
+                <li><a href="portfolio.html" class="hover:text-blue-600 transition-colors">Sản Phẩm</a></li>
+                <li>
+                    <a href="contact.html"
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Liên Hệ
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Nút mobile -->
+            <button id="mobile-menu-button" class="lg:hidden text-slate-800" aria-label="Mở menu">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </nav>
+
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white">
+            <ul class="flex flex-col items-center space-y-6 py-6 text-slate-700">
+                <li><a href="index.html" class="hover:text-blue-600 transition-colors">Trang chủ</a></li>
+                <li><a href="introduce.html" class="hover:text-blue-600 transition-colors">Giới thiệu</a></li>
+                <li><a href="values.html" class="hover:text-blue-600 transition-colors">Giá Trị Cốt Lõi</a></li>
+                <li><a href="tech-fields.html" class="hover:text-blue-600 transition-colors  text-blue-600">Lĩnh Vực</a>
+                </li>
+                <li><a href="portfolio.html" class="hover:text-blue-600 transition-colors">Sản Phẩm</a></li>
+                <li>
+                    <a href="contact.html"
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+                        Liên Hệ
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- Breadcrumb -->
+        <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 text-xl text-slate-600">
+                    <li>
+                        <a href="index.html" class="hover:text-blue-600 transition-colors">Trang chủ</a>
+                    </li>
+                    <li aria-hidden="true">/</li>
+                    <li>
+                        <a href="tech-fields.html" class="hover:text-blue-600 transition-colors">Lĩnh vực</a>
+                    </li>
+                    <li aria-hidden="true">/</li>
+                    <li class="font-medium text-blue-600" aria-current="page">
+                        Truyền thanh thông minh
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+
+        <!-- ========== HERO SECTION ========== -->
+        <section id="ve-chung-toi" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <div class="w-40 h-1 bg-gradient-to-r from-purple-500 to-indigo-400 mx-auto mb-4"></div>
+                    <h3 class="text-4xl font-bold">HỆ THỐNG TRUYỀN THANH THÔNG MINH</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:h-80">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-transparent hover:border-purple-400 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition-all duration-500 ease-out text-center group flex flex-col items-center"
+                        data-aos="fade-right" data-aos-delay="300">
+                        <div class="relative flex justify-center items-center w-32 h-32 mx-auto mb-4">
+                            <img class="absolute group-hover:-rotate-12 transition-transform duration-700 ease-in-out w-30 h-30"
+                                src="public/services-shape.svg" alt="shape">
+                            <img class="absolute" src="public/services-shape-1.svg" alt="shape">
+                            <i class="lni lni-user-multiple-4 text-2xl text-white z-10"></i>
+                        </div>
+                        <h4 class="mt-6 text-2xl font-semibold">
+                            <a href="javascript:void(0)" class="hover:text-purple-600 transition-colors">+8 KỸ SƯ TƯ VẤN
+                                THIẾT KẾ DỰ ÁN</a>
+                        </h4>
+                        <p class="mt-3 text-gray-600 text-xl">
+                            Sở hữu năng lực nhân sự chuyên môn cao tư vấn dự án về công nghệ về truyền thông dữ liệu;
+                            Công nghệ IoT, Bigdata, chuyển đổi số tại Cơ quan, tổ chức và doanh nghiệp
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-transparent hover:border-purple-400 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition-all duration-500 ease-out text-center group flex flex-col items-center"
+                        data-aos="fade-up" data-aos-delay="450">
+                        <div class="relative flex justify-center items-center w-32 h-32 mx-auto mb-4">
+                            <img class="absolute group-hover:-rotate-12 transition-transform duration-700 ease-in-out w-30 h-30"
+                                src="public/services-shape.svg" alt="shape">
+                            <img class="absolute" src="public/services-shape-2.svg" alt="shape">
+                            <i class="lni lni-certificate-badge-1 text-2xl text-white z-10"></i>
+                        </div>
+                        <h4 class="mt-6 text-2xl font-semibold">
+                            <a href="javascript:void(0)" class="hover:text-purple-600 transition-colors">+12 KỸ SƯ TRIỂN
+                                KHAI</a>
+                        </h4>
+                        <p class="mt-3 text-gray-600 text-xl">
+                            Sở hữu nhân lực có kinh nghiệm triển khai thực tế các dự án phần mềm, truyền thanh, dự án
+                            camera, dự án về xây dựng và kỹ thuật hạ tầng CNTT
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-transparent hover:border-purple-400 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)] transition-all duration-500 ease-out text-center group flex flex-col items-center"
+                        data-aos="fade-right" data-aos-delay="600">
+                        <div class="relative flex justify-center items-center w-32 h-32 mx-auto mb-4">
+                            <img class="absolute group-hover:-rotate-12 transition-transform duration-700 ease-in-out w-30 h-30"
+                                src="public/services-shape.svg" alt="shape">
+                            <img class="absolute" src="public/services-shape-3.svg" alt="shape">
+                            <i class="lni lni-shield-2-check text-2xl text-white z-10"></i>
+                        </div>
+                        <h4 class="mt-6 text-2xl font-semibold">
+                            <a href="javascript:void(0)" class="hover:text-purple-600 transition-colors">+5 SI VÀ VẬN
+                                HÀNH</a>
+                        </h4>
+                        <p class="mt-3 text-gray-600 text-xl">
+                            Triển khai tích hợp và vận hành hệ thống đảm bảo theo tiêu chuẩn của nhà nước đảm bảo hệ
+                            thống vận hành 24/7.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== VERSION SECTION ========== -->
+        <section id="phien-ban" class="py-20 bg-white from-emerald-50 to-teal-50">
+            <div class="container mx-auto px-6">
+                <!-- Version 1 -->
+                <div class="flex flex-col md:flex-row items-center mb-16" data-aos="fade-right">
+                    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+                        <div class="w-40 h-1 bg-gradient-to-r from-purple-500 to-indigo-400 mb-4"></div>
+                        <h3 class="text-3xl font-bold mb-4">
+                            <span class="text-purple-600">Truyền thanh thông minh</span> version 1
+                        </h3>
+                        <ul class="text-gray-600 space-y-2 text-xl">
+                            <li>Bộ phát truyền thanh thông minh RT-LCD01/ENC</li>
+                            <li>Bộ thu truyền thanh thông minh RT-LCD01</li>
+                            <li>Bộ thu truyền thanh thông minh (tích hợp điều khiển ngoại vi) RT-LCD01/FM-TRANS</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="public/tttm-v1.png" alt="Truyền thanh thông minh version 1"
+                            class="rounded-lg shadow-xl border-2 border-white/50 transition-all duration-300 max-h-64 shadow-md shadow-green-600/20 img-hover-zoom floating">
+                    </div>
+                </div>
+
+                <!-- Version 2 -->
+                <div class="flex flex-col md:flex-row items-center mb-16" data-aos="fade-left">
+                    <div class="md:w-1/2 order-2 md:order-1 flex justify-center">
+                        <img src="public/tttm-v2-1.png" alt="Truyền thanh thông minh version 2"
+                            class="rounded-lg shadow-xl border-2 border-white/50 transition-all duration-300 max-h-64 shadow-md shadow-blue-600/20 img-hover-zoom floating">
+                    </div>
+                    <div class="md:w-1/2 order-1 md:order-2 md:pl-10 mb-8 md:mb-0">
+                        <div class="w-40 h-1 bg-gradient-to-r from-purple-500 to-indigo-400 mb-4"></div>
+                        <h3 class="text-3xl font-bold mb-4">
+                            <span class="text-purple-600">Truyền thanh thông minh</span> version 2
+                        </h3>
+                        <ul class="text-gray-600 space-y-2 text-xl">
+                            <li>Bộ phát truyền thanh thông minh RTSM-T01</li>
+                            <li>Bộ thu truyền thanh thông minh RTSM-R01</li>
+                            <li>Bộ thu truyền thanh thông minh (tích hợp điều khiển ngoại vi) RTSM-R02</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Nhà máy, trường học -->
+                <div class="flex flex-col md:flex-row items-center" data-aos="fade-up">
+                    <div class="md:w-1/2 md:pr-10 mb-8 md:mb-0">
+                        <div class="w-40 h-1 bg-gradient-to-r from-purple-500 to-indigo-400 mb-4"></div>
+                        <h3 class="text-3xl font-bold mb-4">
+                            <span class="text-purple-600">Âm thanh</span> nhà máy, trường học
+                        </h3>
+                        <ul class="text-gray-600 space-y-2 text-xl">
+                            <li>Bộ mã hóa âm thanh IP BT-SV-MT</li>
+                            <li>Bộ giải mã âm thanh IP BT-SV-SL</li>
+                            <li>Loa IP tích hợp BT-SV-SPK1</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="public/tttm-am_thanh_nha_may-truong_hoc.png" alt="Âm thanh nhà máy, trường học"
+                            class="rounded-lg shadow-xl border-2 border-white/50 transition-all duration-300 max-h-64 shadow-md shadow-orange-600/20 img-hover-zoom floating">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MODEL SECTION ========== -->
+        <section id="mo-hinh" class="py-20 bg-slate-50 from-teal-50 to-cyan-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <div class="w-40 h-1 bg-gradient-to-r from-purple-500 to-indigo-400 mx-auto mb-4"></div>
+                    <h3 class="text-3xl font-bold">MÔ HÌNH HỆ THỐNG TRUYỀN THANH THÔNG MINH</h3>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                        Hệ thống được thiết kế với kiến trúc hiện đại, dễ dàng mở rộng và tích hợp
+                    </p>
+                </div>
+                <div class="flex justify-center" data-aos="zoom-in">
+                    <img src="public/mohinhtruyenthanhthongminhv2.png" alt="Mô hình hệ thống"
+                        class="rounded-xl shadow-xl border-2 border-white/50 max-w-full img-hover-zoom">
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FEATURES SECTION ========== -->
+        <section id="chuc-nang" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <div class="w-40 h-1 bg-gradient-to-r from-cyan-500 to-green-400 mx-auto mb-4"></div>
+                    <h3 class="text-3xl font-bold">CHỨC NĂNG VÀ LỢI ÍCH HỆ THỐNG</h3>
+                    <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                        Những tính năng ưu việt và lợi ích vượt trội mà hệ thống mang lại
+                    </p>
+                </div>
+                <div class="space-y-12">
+                    <div class="flex justify-center" data-aos="fade-right">
+                        <img src="public/chucnanghethong.png" alt="Chức năng hệ thống"
+                            class="rounded-xl shadow-xl border-2 border-white/50 max-w-full shadow-md shadow-blue-600/20 img-hover-zoom">
+                    </div>
+                    <div class="flex justify-center" data-aos="fade-left">
+                        <img src="public/loiich.png" alt="Lợi ích hệ thống"
+                            class="rounded-xl shadow-xl border-2 border-white/50 max-w-full shadow-md shadow-green-600/20 img-hover-zoom">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-slate-800 text-slate-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-1">
+                    <a href="index.html" class="mb-4 inline-block"><img src="public/LogoHH.png"
+                            alt="Logo Công ty Hoàng Huy" class="h-12" /></a>
+                    <p class="text-white font-semibold">
+                        CÔNG TY CỔ PHẦN ĐẦU TƯ CÔNG NGHỆ HOÀNG HUY
+                    </p>
+                    <p class="mt-2 text-slate-400">MST: 0110817764</p>
+                    <p class="mt-2 text-slate-400">
+                        Địa chỉ: Số 10, Ơ 2, Khu đô thị bán đảo Linh Đàm, Phường Hoàng
+                        Liệt, Thành phố Hà Nội, Việt Nam
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Liên kết nhanh</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#values" class="hover:text-white">Giá Trị Cốt Lõi</a>
+                        </li>
+                        <li>
+                            <a href="#tech-fields" class="hover:text-white">Lĩnh Vực</a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="hover:text-white">Sản Phẩm</a>
+                        </li>
+                        <li><a href="#contact" class="hover:text-white">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Kết nối</h3>
+                    <p>
+                        Email:
+                        <a href="mailto:congnghehoanghuyjsc@gmail.com"
+                            class="hover:text-white">congnghehoanghuyjsc@gmail.com</a>
+                    </p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="hover:text-white" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="hover:text-white" aria-label="Facebook"><i
+                                class="fab fa-facebook fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-700 text-center text-slate-500">
+                <p>
+                    &copy; 2025 Hoang Huy Technology Investment JSC. All Rights
+                    Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!--====== BACK TO TOP BUTTON ======-->
+    <a href="#"
+        class="fixed bottom-24 right-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2.5 rounded-full hover:from-blue-700 hover:to-purple-700 shadow-md shadow-blue-600/20">
+        <i class="lni lni-chevron-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out-quad',
+            mirror: true
+        });
+
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuIcon = mobileMenuButton.querySelector("i");
+
+        mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenuIcon.classList.remove("fa-times");
+                mobileMenuIcon.classList.add("fa-bars");
+            } else {
+                mobileMenuIcon.classList.remove("fa-bars");
+                mobileMenuIcon.classList.add("fa-times");
+            }
+        });
+
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        mobileMenuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                mobileMenuIcon.classList.remove("fa-times");
+                mobileMenuIcon.classList.add("fa-bars");
+            });
+        });
+    </script>
+
+    <!-- Floating Zalo Button -->
+    <a href="https://zalo.me/02466669898" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo"
+        class="fixed bottom-6 right-6 z-50">
+        <span
+            class="w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-xl flex items-center justify-center transition-transform transform hover:scale-110 font-bold">Zalo</span>
+    </a>
+</body>
+
+</html>
